@@ -1,46 +1,63 @@
-# Publicar na Vercel
+# Publicar via GitHub + Vercel
 
-O projeto já é um app Next.js único (rotas `/`, `/consultoria`, `/lp-studio-elite`, `/painel`, `/painel/login`).
-Como a publicação de pasta local é feita pela CLI da Vercel, rode os comandos abaixo no **Terminal do seu Mac**.
+O projeto já é um app Next.js único (rotas `/`, `/consultoria`, `/lp-studio-elite`, `/painel`, `/painel/login`)
+e **já tem um commit git** pronto (branch `master`).
 
-## 1. Instalar a CLI (uma vez só)
+> Rode os comandos abaixo no **Terminal do seu Mac**, dentro da pasta do projeto.
 
-```bash
-npm i -g vercel
-```
+## 1. Limpar os arquivos de lock
 
-## 2. Entrar na sua conta Vercel
-
-```bash
-vercel login
-```
-
-(Abre o navegador pra você confirmar o login.)
-
-## 3. Publicar
+O commit foi feito por um ambiente que não conseguiu remover uns `.lock`. Apague-os primeiro:
 
 ```bash
 cd "/Users/davi/Documents/Projetos/Site Davi"
-vercel          # primeira vez: cria o projeto e faz um deploy de preview
-vercel --prod   # publica em produção
+rm -f .git/index.lock .git/HEAD.lock .git/objects/maintenance.lock
+git status      # deve mostrar "nothing to commit, working tree clean"
+git log --oneline   # deve mostrar o commit "Unifica site em app Next.js..."
 ```
 
-Na primeira execução a CLI pergunta:
-- **Set up and deploy?** → `Y`
-- **Which scope?** → sua conta
-- **Link to existing project?** → `N`
-- **Project name?** → ex.: `site-davi`
-- **Directory?** → `./` (Enter)
-- Framework detectado automaticamente: **Next.js** (Enter em tudo)
+(Opcional, pra usar `main` em vez de `master`:)
 
-Ao final ele te dá uma URL `https://site-davi-xxxx.vercel.app`.
+```bash
+git branch -m main
+```
+
+## 2. Criar o repositório no GitHub e enviar
+
+Crie um repositório **vazio** em https://github.com/new (sem README, sem .gitignore).
+Depois, com a URL dele:
+
+```bash
+git remote add origin https://github.com/SEU_USUARIO/SEU_REPO.git
+git push -u origin master   # ou: git push -u origin main, se renomeou
+```
+
+## 3. Importar na Vercel
+
+Em https://vercel.com/new → **Import Git Repository** → selecione o repositório.
+A Vercel detecta **Next.js** sozinha (não precisa mexer em build/output). Clique **Deploy**.
 
 ## 4. Apontar o domínio
 
-No painel da Vercel: **Project → Settings → Domains → Add**, digite seu domínio.
-A Vercel mostra os registros DNS. No geral:
+No projeto da Vercel: **Settings → Domains → Add**, digite seu domínio.
+A Vercel mostra os registros DNS. Normalmente:
 
 - Domínio raiz (`seudominio.com.br`): registro **A** → `76.76.21.21`
 - `www`: registro **CNAME** → `cname.vercel-dns.com`
 
-(Os valores exatos a Vercel confirma na hora — me passe o domínio que eu te dou o passo a passo certinho e confiro a propagação.)
+Os valores exatos a Vercel confirma na hora. **Me passe o domínio** que eu te dou o passo a passo
+certinho do DNS e confiro a propagação depois.
+
+---
+
+## Atualizações futuras
+
+Toda vez que mexer no site, é só:
+
+```bash
+git add -A
+git commit -m "descrição da mudança"
+git push
+```
+
+A Vercel publica sozinha a cada push.
