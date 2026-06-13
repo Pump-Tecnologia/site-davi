@@ -73,9 +73,34 @@ body {
 .landing-root .card-purple:hover {
   box-shadow: 0 18px 32px rgba(147, 51, 234, 0.2);
 }
+.landing-root .card-violet:hover {
+  box-shadow: 0 18px 32px rgba(139, 92, 246, 0.26);
+}
+.landing-root .card-cyan:hover {
+  box-shadow: 0 18px 32px rgba(34, 211, 238, 0.22);
+}
 .landing-root .card-disabled {
   opacity: 0.72;
   pointer-events: none;
+}
+
+/* Flagship card — breaks the uniform stack to create hierarchy */
+.landing-root .card-featured {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.14), rgba(255, 255, 255, 0.02));
+  border-color: rgba(139, 92, 246, 0.38);
+  box-shadow: 0 16px 34px rgba(76, 29, 149, 0.28);
+}
+.landing-root .card-featured:hover {
+  border-color: rgba(139, 92, 246, 0.6);
+  box-shadow: 0 22px 44px rgba(139, 92, 246, 0.34);
+}
+
+/* Visible keyboard focus for link cards */
+.landing-root .link-card:focus-visible,
+.landing-root .social-link:focus-visible {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.28);
 }
 .landing-root .badge {
   display: inline-flex;
@@ -107,6 +132,16 @@ body {
   color: #9ca3af;
   border: 1px solid rgba(107, 114, 128, 0.5);
 }
+.landing-root .badge-violet {
+  background-color: rgba(139, 92, 246, 0.2);
+  color: #c4b5fd;
+  border: 1px solid rgba(139, 92, 246, 0.5);
+}
+.landing-root .badge-cyan {
+  background-color: rgba(34, 211, 238, 0.18);
+  color: #67e8f9;
+  border: 1px solid rgba(34, 211, 238, 0.45);
+}
 .landing-root .avatar-glow {
   box-shadow: 0 22px 46px rgba(74, 222, 128, 0.16), 0 16px 26px rgba(0, 0, 0, 0.35);
   animation: avatarPulse 6.2s ease-in-out infinite;
@@ -133,20 +168,6 @@ body {
   50% {
     transform: translateY(-6px);
   }
-}
-
-/* ============================================================
-   CONSULTORIA PAGE ( /consultoria ) — scoped to .consultoria-root
-   ============================================================ */
-.consultoria-root {
-  min-height: 100vh;
-  background-color: #0a0a0a;
-  color: #ededed;
-}
-.consultoria-root .glass-card {
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* ============================================================

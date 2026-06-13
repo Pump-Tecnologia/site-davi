@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans]
+        sans: ["var(--font-sora)", ...defaultTheme.fontFamily.sans]
       },
       colors: {
         brand: {
