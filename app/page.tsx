@@ -99,65 +99,12 @@ export default function LandingPage() {
 
         {/* Professional Bio Links */}
         <nav className="w-full flex flex-col gap-3" aria-label="Produtos e serviços">
-          {/* Sonorum — flagship SaaS */}
-          <a
-            href="https://sonorum.com.br/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="anim-item opacity-0 group glass-card link-card card-featured relative rounded-2xl p-4 flex items-center justify-between gap-4 min-h-20"
-          >
-            <div className="flex items-center gap-3 flex-1 min-w-0">
-              <span className="flex-shrink-0 grid place-items-center w-10 h-10 rounded-lg bg-violet-500/20 text-violet-200 transition-colors group-hover:bg-violet-500/30">
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 18V6l11-2v12" />
-                  <circle cx="6" cy="18" r="2.6" fill="currentColor" stroke="none" />
-                  <circle cx="17" cy="16" r="2.6" fill="currentColor" stroke="none" />
-                </svg>
-              </span>
-              <div className="min-w-0">
-                <h3 className="font-semibold text-white text-sm leading-snug">Sonorum</h3>
-                <p className="text-gray-400 text-xs leading-snug mt-0.5">
-                  Plataforma de gestão para escolas e professores de música
-                </p>
-              </div>
-            </div>
-            <span className="badge badge-violet flex-shrink-0">SaaS</span>
-          </a>
-
-          {/* OrçAí — robô de orçamento */}
-          <a
-            href="https://orcai.convexa-ia.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="anim-item opacity-0 group glass-card link-card card-cyan relative rounded-2xl p-4 flex items-center justify-between gap-4 min-h-20"
-          >
-            <div className="flex items-center gap-3 flex-1 min-w-0">
-              <span className="flex-shrink-0 grid place-items-center w-10 h-10 rounded-lg bg-cyan-500/20 text-cyan-200 transition-colors group-hover:bg-cyan-500/30">
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">
-                  <rect x="4" y="8" width="16" height="11" rx="3" />
-                  <path strokeLinecap="round" d="M12 8V4.5" />
-                  <circle cx="12" cy="3.4" r="1.1" fill="currentColor" stroke="none" />
-                  <circle cx="9.2" cy="13.5" r="1.2" fill="currentColor" stroke="none" />
-                  <circle cx="14.8" cy="13.5" r="1.2" fill="currentColor" stroke="none" />
-                  <path strokeLinecap="round" d="M9.5 16.5h5" />
-                </svg>
-              </span>
-              <div className="min-w-0">
-                <h3 className="font-semibold text-white text-sm leading-snug">OrçAí</h3>
-                <p className="text-gray-400 text-xs leading-snug mt-0.5">
-                  Robô que monta e envia orçamentos pelo WhatsApp na hora
-                </p>
-              </div>
-            </div>
-            <span className="badge badge-cyan flex-shrink-0">Novo</span>
-          </a>
-
           {/* Pump Software House */}
           <a
             href="https://pumpsites.com.br"
             target="_blank"
             rel="noopener noreferrer"
-            className="anim-item opacity-0 group glass-card link-card card-blue relative rounded-2xl p-4 flex items-center justify-between gap-4 min-h-20"
+            className="anim-item opacity-0 group glass-card link-card relative rounded-2xl p-4 flex items-center justify-between gap-4 min-h-20"
           >
             <div className="flex items-center gap-3 flex-1 min-w-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -178,43 +125,69 @@ export default function LandingPage() {
             <Arrow />
           </a>
 
-          {/* Convexa IA — atendimento */}
+          {/* Sonorum — SaaS para escolas de música */}
           <a
-            href="/atendimento"
-            className="anim-item opacity-0 group glass-card link-card card-green relative rounded-2xl p-4 flex items-center justify-between gap-4 min-h-20"
+            href="https://sonorum.com.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="anim-item opacity-0 group glass-card link-card relative rounded-2xl p-4 flex items-center justify-between gap-4 min-h-20"
           >
             <div className="flex items-center gap-3 flex-1 min-w-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/assets/img/logo-convexa.png"
-                alt="Convexa IA"
+                src="/assets/img/logo-sonorum.png"
+                alt="Sonorum"
                 width={40}
                 height={40}
                 className="w-10 h-10 object-contain rounded-lg flex-shrink-0"
               />
               <div className="min-w-0">
-                <h3 className="font-semibold text-white text-sm leading-snug">Convexa IA</h3>
+                <h3 className="font-semibold text-white text-sm leading-snug">Sonorum</h3>
                 <p className="text-gray-400 text-xs leading-snug mt-0.5">
-                  Atendimento com IA respondendo seus clientes 24h
+                  Plataforma de gestão para escolas e professores de música
                 </p>
               </div>
             </div>
-            <Arrow />
+            <span className="badge badge-violet flex-shrink-0">SaaS</span>
+          </a>
+
+          {/* OrçAí — robô de orçamento */}
+          <a
+            href="https://orcai.convexa-ia.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="anim-item opacity-0 group glass-card link-card relative rounded-2xl p-4 flex items-center justify-between gap-4 min-h-20"
+          >
+            <div className="flex items-center gap-3 flex-1 min-w-0">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/assets/img/logo-orcai.png"
+                alt="OrçAí"
+                width={40}
+                height={40}
+                className="w-10 h-10 object-contain rounded-lg flex-shrink-0"
+              />
+              <div className="min-w-0">
+                <h3 className="font-semibold text-white text-sm leading-snug">OrçAí</h3>
+                <p className="text-gray-400 text-xs leading-snug mt-0.5">
+                  Robô que monta e envia orçamentos pelo WhatsApp na hora
+                </p>
+              </div>
+            </div>
+            <span className="badge badge-cyan flex-shrink-0">Novo</span>
           </a>
 
           {/* Studio Elite — prompts */}
-          <div className="anim-item opacity-0 group glass-card link-card card-green relative rounded-2xl p-4 flex items-center justify-between gap-4 min-h-20">
+          <div className="anim-item opacity-0 group glass-card link-card relative rounded-2xl p-4 flex items-center justify-between gap-4 min-h-20">
             <div className="flex items-center gap-3 flex-1 min-w-0">
-              <span className="flex-shrink-0 grid place-items-center w-10 h-10 rounded-lg bg-green-500/20 transition-colors group-hover:bg-green-500/30">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/assets/img/logo-studio.jpeg"
-                  alt="Studio Elite"
-                  width={20}
-                  height={20}
-                  className="w-5 h-5 object-contain rounded"
-                />
-              </span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/assets/img/logo-studio.jpeg"
+                alt="Studio Elite"
+                width={40}
+                height={40}
+                className="w-10 h-10 object-contain rounded-lg flex-shrink-0"
+              />
               <div className="min-w-0">
                 <h3 className="font-semibold text-white text-sm leading-snug">Studio Elite</h3>
                 <p className="text-gray-400 text-xs leading-snug mt-0.5">

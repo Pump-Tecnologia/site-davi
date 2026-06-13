@@ -39,9 +39,7 @@ body {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02));
   backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 255, 255, 0.09);
-  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.45s ease, box-shadow 0.45s ease,
-    background 0.45s ease;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.45s ease, background 0.45s ease;
 }
 .landing-root .glass-card:hover {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
@@ -64,43 +62,17 @@ body {
 .landing-root .link-card:hover::before {
   transform: translateX(130%);
 }
-.landing-root .card-blue:hover {
-  box-shadow: 0 18px 32px rgba(31, 0, 94, 0.24);
-}
-.landing-root .card-green:hover {
-  box-shadow: 0 18px 32px rgba(34, 197, 94, 0.2);
-}
-.landing-root .card-purple:hover {
-  box-shadow: 0 18px 32px rgba(147, 51, 234, 0.2);
-}
-.landing-root .card-violet:hover {
-  box-shadow: 0 18px 32px rgba(139, 92, 246, 0.26);
-}
-.landing-root .card-cyan:hover {
-  box-shadow: 0 18px 32px rgba(34, 211, 238, 0.22);
-}
 .landing-root .card-disabled {
   opacity: 0.72;
   pointer-events: none;
 }
 
-/* Flagship card — breaks the uniform stack to create hierarchy */
-.landing-root .card-featured {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.14), rgba(255, 255, 255, 0.02));
-  border-color: rgba(139, 92, 246, 0.38);
-  box-shadow: 0 16px 34px rgba(76, 29, 149, 0.28);
-}
-.landing-root .card-featured:hover {
-  border-color: rgba(139, 92, 246, 0.6);
-  box-shadow: 0 22px 44px rgba(139, 92, 246, 0.34);
-}
-
 /* Visible keyboard focus for link cards */
 .landing-root .link-card:focus-visible,
 .landing-root .social-link:focus-visible {
-  outline: none;
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
   border-color: rgba(255, 255, 255, 0.55);
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.28);
 }
 .landing-root .badge {
   display: inline-flex;
@@ -143,7 +115,7 @@ body {
   border: 1px solid rgba(34, 211, 238, 0.45);
 }
 .landing-root .avatar-glow {
-  box-shadow: 0 22px 46px rgba(74, 222, 128, 0.16), 0 16px 26px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   animation: avatarPulse 6.2s ease-in-out infinite;
 }
 .landing-root .social-link:hover {
